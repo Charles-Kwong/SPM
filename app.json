@@ -1,7 +1,7 @@
 {
     "pages": [
-        "pages/index/index",
         "pages/login/login",
+        "pages/index/index",
         "pages/logs/logs",
         "pages/my/my_info",
         "pages/tracing/tracing_list",
@@ -15,7 +15,7 @@
         "pages/mgr-index/index/index"
     ],
     "tabBar": {
-        "borderStyle": "#fff",
+        "borderStyle": "white",
         "backgroundColor": "#fff",
         "color": "#999",
         "selectedColor": "#428C89",
@@ -41,7 +41,7 @@
         ]
     },
     "window": {
-        "backgroundTextStyle": "white",
+        "backgroundTextStyle": "light",
         "navigationBarBackgroundColor": "#377EE8",
         "navigationBarTitleText": "润妃服务管理",
         "navigationBarTextStyle": "white",

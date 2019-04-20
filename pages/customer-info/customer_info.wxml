@@ -20,48 +20,48 @@
       <view class='divide-line'>—————— 业务资料 ——————</view>
       <view class='recordItem flex-wrp' style="flex-direction:row;justify-content:space-between;">
         <view class="flex-item item-title">姓名</view>
-        <view class="flex-item item-content">{{customer.name}}</view>
+        <view class="flex-item item-content">{{customer.cliName}}</view>
       </view>
       <view class='recordItem flex-wrp' style="flex-direction:row;justify-content:flex-start;">
         <view class="flex-item item-title">客户类型</view>
-        <view class="flex-item item-content">{{customer.type}}</view>
+        <view class="flex-item item-content">{{customer.cliType.typeName}}</view>
       </view>
       <view class='recordItem flex-wrp' style="flex-direction:row;justify-content:flex-start;">
         <view class="flex-item item-title">开始日期</view>
-        <view class="flex-item item-content">{{customer.startDate}}</view>
+        <view class="flex-item item-content">{{customer.cliPurchaseDate}}</view>
       </view>
       <view class='recordItem flex-wrp' style="flex-direction:row;justify-content:flex-start;">
         <view class="flex-item item-title">负责导师</view>
-        <view class="flex-item item-content">{{customer.advisor}}</view>
+        <view class="flex-item item-content">{{customer.advisor.empName}}</view>
       </view>
       <view class='recordItem flex-wrp' style="flex-direction:row;justify-content:flex-start;">
         <view class="flex-item item-title">初始诊断</view>
-        <view class="flex-item item-content">{{customer.skinDesc}}</view>
+        <view class="flex-item item-content">{{customer.cliFirstDesc}}</view>
       </view>
       <view class='recordItem flex-wrp' style="flex-direction:row;justify-content:flex-start;">
         <view class="flex-item item-title">产品配方</view>
-        <view class="flex-item item-content">{{customer.product}}</view>
+        <view class="flex-item item-content">{{customer.cliRecipe}}</view>
       </view>
       <view class='divide-line'>—————— 基本资料 ——————</view>
       <view class='recordItem flex-wrp' style="flex-direction:row;justify-content:flex-start;">
         <view class="flex-item item-title">性别</view>
-        <view class="flex-item item-content">{{customer.gender}}</view>
+        <view class="flex-item item-content">{{customer.cliGender}}</view>
       </view>
       <view class='recordItem flex-wrp' style="flex-direction:row;justify-content:flex-start;">
         <view class="flex-item item-title">年龄</view>
-        <view class="flex-item item-content">{{customer.age}}</view>
+        <view class="flex-item item-content">{{customer.cliAge}}</view>
       </view>
       <view class='recordItem flex-wrp' style="flex-direction:row;justify-content:flex-start;">
         <view class="flex-item item-title">微信号</view>
-        <view class="flex-item item-content">{{customer.wechatId}}</view>
+        <view class="flex-item item-content">{{customer.cliWechat}}</view>
       </view>
       <view class='recordItem flex-wrp' style="flex-direction:row;justify-content:flex-start;">
         <view class="flex-item item-title">电话</view>
-        <view class="flex-item item-content">{{customer.phone}}</view>
+        <view class="flex-item item-content">{{customer.cliPhone}}</view>
       </view>
       <view class='recordItem flex-wrp' style="flex-direction:row;justify-content:flex-start;">
         <view class="flex-item item-title">住址</view>
-        <view class="flex-item item-content">{{customer.addr}}</view>
+        <view class="flex-item item-content">{{customer.cliAddress}}</view>
       </view>
       <view class='divide-line'>—————— 没有更多啦 ——————</view>
     </swiper-item>
