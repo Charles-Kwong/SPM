@@ -1,0 +1,43 @@
+<!--pages/my/modify_info/modify_info.wxml-->
+<scroll-view scroll-y="true" class="container" bindscrolltoupper="upper" upper-threshold="10" lower-threshold="5" bindscrolltolower="lower" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+  <view class="weui-cells__title">修改资料</view>
+  <view class="weui-cells weui-cells_after-title">
+  <view class="weui-cell weui-cell_input">
+    <view class="weui-cell__hd">
+      <view class="weui-label">性别</view>
+    </view>
+    <view class="weui-cell__bd">
+     <!--  <radio-group class="radio-group" bindchange="radioChange">
+    <label class="radio" wx:for="{{genderItems}}" wx:for-item="item">
+        <radio value="{{item.name}}" checked="{{item.checked}}"/>{{item.name}}
+    </label>
+    </radio-group> -->
+    <picker bindchange="bindPickerChange" value="{{index}}" range="{{genderItem}}">
+        <view class="picker">
+          {{genderItem[index]}}
+        </view>
+      </picker>
+    </view>
+  </view>
+  <view class="weui-cell weui-cell_input">
+    <view class="weui-cell__hd">
+      <view class="weui-label">联系电话</view>
+    </view>
+    <view class="weui-cell__bd">
+      <input class="weui-input" />
+    </view>
+  </view>
+  <view class="weui-cell weui-cell_input">
+    <view class="weui-cell__hd">
+      <view class="weui-label">住址</view>
+    </view>
+    <view class="weui-cell__bd">
+      <textarea bindinput="bindKeyInput" bindblur='bindblurEvent'></textarea>
+    </view>
+  </view>
+</view>
+  
+<view class='box'>
+  <button class="btn">保存修改</button>
+  </view>
+</scroll-view>

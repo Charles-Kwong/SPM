@@ -1,0 +1,14 @@
+<!--pages/mgr-index/index/index.wxml-->
+<view class="page__bd">
+  <view class='page_title'>润妃店长管理</view>
+</view>
+ <view class="page__bd">
+    <view class="weui-grids">
+      <block wx:for="{{gridList}}"  wx:for-item="item" wx:key="glist">
+        <navigator url="{{item.url}}" class="weui-grid" hover-class="weui-grid_active">
+          <image class="weui-grid__icon" src="{{item.iconUrl}}"/>
+          <view class="weui-grid__label">{{item.title}}</view>
+        </navigator>
+      </block>
+    </view>
+  </view>

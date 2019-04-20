@@ -1,0 +1,42 @@
+<!--pages/my/my_detail/info_detail.wxml-->
+<scroll-view scroll-y="true" class="container" bindscrolltoupper="upper" upper-threshold="10" lower-threshold="5" bindscrolltolower="lower"  scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+<view class='recordItem flex-wrp' style="flex-direction:row;justify-content:space-between;">
+  <view class="flex-item item-title">员工编号</view>
+  <view class="flex-item item-content">{{userInfo.eid}}</view>
+</view>
+<view class='recordItem flex-wrp' style="flex-direction:row;justify-content:space-between;">
+  <view class="flex-item item-title">姓名</view>
+  <view class="flex-item item-content">{{userInfo.name}}</view>
+</view>
+<view class='recordItem flex-wrp' style="flex-direction:row;justify-content:flex-start;">
+  <view class="flex-item item-title">状态</view>
+  <view class="flex-item item-content">{{userInfo.state}}</view>
+</view>
+<view class='recordItem flex-wrp' style="flex-direction:row;justify-content:flex-start;">
+  <view class="flex-item item-title">职位</view>
+  <view class="flex-item item-content">{{userInfo.position}}</view>
+</view>
+<view class='recordItem flex-wrp' style="flex-direction:row;justify-content:flex-start;">
+  <view class="flex-item item-title">入职时间</view>
+  <view class="flex-item item-content">{{userInfo.enterDate}}</view>
+</view>
+<view class='divide-line'>—————— 基本资料 ——————</view>
+<view class='recordItem flex-wrp' style="flex-direction:row;justify-content:flex-start;">
+  <view class="flex-item item-title">性别</view>
+  <view class="flex-item item-content">{{userInfo.gender}}</view>
+</view>
+<view class='recordItem flex-wrp' style="flex-direction:row;justify-content:flex-start;">
+  <view class="flex-item item-title">年龄</view>
+  <view class="flex-item item-content">{{userInfo.age}}</view>
+</view>
+<view class='recordItem flex-wrp' style="flex-direction:row;justify-content:flex-start;">
+  <view class="flex-item item-title">电话</view>
+  <view class="flex-item item-content">{{userInfo.phone}}</view>
+</view>
+<view class='recordItem flex-wrp' style="flex-direction:row;justify-content:flex-start;">
+  <view class="flex-item item-title">住址</view>
+  <view class="flex-item item-content">{{userInfo.addr}}</view>
+</view>
+<button class="btn" bindtap="goToModifyPage">修改资料</button>
+
+</scroll-view>

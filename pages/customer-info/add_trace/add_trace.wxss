@@ -1,0 +1,30 @@
+/* pages/customer-info/add_trace/add_trace.wxss */
+.weui-label{
+  margin-right: 65rpx;
+  width: 160rpx;
+  color: #333;
+}
+.weui-cell__bd{
+  padding: 20rpx 0;
+}
+textarea{
+  height: 200rpx;
+}
+.btn{
+  margin-top:50rpx;
+  display:block;
+margin-left:20rpx;
+margin-right:20rpx;
+padding-left:14px;
+padding-right:14px;
+box-sizing:border-box;
+font-size:40rpx;
+text-align:center;
+text-decoration:none;
+background-color:#377EE8;
+color:#FFFFFF;
+line-height:2.55555556;
+border-radius:5px;
+-webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+overflow:hidden;
+}

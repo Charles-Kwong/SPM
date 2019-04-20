@@ -1,0 +1,116 @@
+/* pages/login/login.wxss */
+page{
+  height: 100%;
+  background-size:100%;
+  /* background-image: url('http://songlijuan.top/bk2.jpg'); */
+}
+ 
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  box-sizing: border-box;
+  /* background-color: #f2f2f2;     */
+} 
+ 
+/*登录图片*/
+.login-icon{
+  flex: none;
+  margin: 0 auto;
+  margin-top: 80rpx;
+}
+.login-img{
+  width: 220rpx;
+  height: 220rpx;
+  border-radius: 110rpx;
+  opacity: 0.6;
+}
+ .systemName{
+   margin-top: 30rpx;
+   text-align: center;
+   font-weight: bold;
+   font-size: 50rpx;
+ }
+/*表单内容*/
+.login-from {
+  margin-top: 60px;
+  flex: auto;
+  height:100%;
+}
+ 
+/* 输入框 */
+.myno{
+  width: 90%;
+  margin: 0 auto;
+  border:1px solid #ccc;
+  border-radius: 50rpx;
+ 
+}
+.mypwd{
+  width: 90%;
+  margin: 0 auto;
+  border:1px solid #ccc;
+  border-radius: 50rpx;
+  margin-top: 20rpx;
+}
+/*按钮*/
+.loginBtnView {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+ 
+.loginBtn {
+  width: 90%;
+  height: 90rpx;
+  line-height: 80rpx;
+  margin-top: 35px;
+  color: #fff;
+  background-color:#7e8ef0;
+  border: 0.1rpx solid #ccc;
+  border-radius: 40rpx;
+}
+ 
+ 
+.nameImage{
+  margin-right: 10px;
+  width: 14px;
+  height: 14px;
+  text-align: center;
+}
+
+radio .wx-radio-input.wx-radio-input-checked::before{
+   width: 20rpx; 
+   height: 20rpx; 
+   border-radius: 50%;
+   text-align: center;
+   font-size:0rpx; /* 对勾大小 去掉 */
+   background-color: #666; 
+   transform:translate(-50%, -50%) scale(1);
+   -webkit-transform:translate(-50%, -50%) scale(1);
+}
+radio{
+  border-radius: 50%;
+  margin-right:10rpx;
+  width: 40rpx;/* 最好是4的倍数，不然会不在中间 */
+  height: 40rpx;
+  border: 2rpx solid #666;/* 设置边框（外圆） */
+  /* font-size: 0;让边框重合 */
+}
+radio .wx-radio-input{
+   border-radius: 50%;
+   width: 40rpx;
+   height: 40rpx; 
+   border: none;/* 替换边框（隐藏原有边框） */
+}
+label{
+  margin-right: 20rpx;
+  line-height: 28rpx;
+}
+.roleSelect{
+  margin-bottom: 30rpx;
+}
+.radio-group{
+  text-align: center;
+}

@@ -1,0 +1,19 @@
+/* pages/my/modify_pwd/modify_pwd.wxss */
+.btn{
+  display:block;
+  margin-top: 50rpx;
+margin-left:20rpx;
+margin-right:20rpx;
+padding-left:14px;
+padding-right:14px;
+box-sizing:border-box;
+font-size:40rpx;
+text-align:center;
+text-decoration:none;
+background-color:#377EE8;
+color:#FFFFFF;
+line-height:2.55555556;
+border-radius:5px;
+-webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+overflow:hidden;
+}
