@@ -1,0 +1,87 @@
+/* pages/customer-info/customer_info.wxss */
+
+.container {
+  padding: 0;
+  font-size: 35rpx;
+  color: #333;
+}
+
+.tab-title {
+  width: 100%;
+  height: 88rpx;
+  background: #5291f0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-bottom: 1rpx solid #333;
+}
+
+.titleSel {
+  color: #fff;
+  font-size: 32rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.titleUnsel {
+  color: #666;
+  font-size: #666;
+}
+
+.headerLineSel {
+  background: #fff;
+  height: 6rpx;
+  width: 90rpx;
+  position: relative;
+  margin-top: 10rpx;
+}
+
+.headerLineUnsel {
+  background: #489fda;
+  height: 6rpx;
+  width: 90rpx;
+  position: relative;
+  margin-top: 10rpx;
+}
+
+.swiper {
+  width: 100%;
+  flex: 1;
+  height: 100vh;
+  overflow: scroll;
+}
+
+.recordItem {
+  margin: 0 15rpx;
+  padding: 20rpx 40rpx;
+  border-bottom: 1rpx solid #ccc;
+  background: #fff;
+}
+
+.item-title {
+  text-align: left;
+  font-weight: bold;
+}
+
+.item-content {
+  text-align: right;
+}
+
+.tDate {
+  color: #ccc;
+}
+
+.divide-line {
+  margin: 20rpx 0;
+  color: #ccc;
+  text-align: center;
+}
+
+.add_icon {
+  position: fixed;
+  width: 35px;
+  height: 35px;
+  bottom: 30px;
+  right: 20px;
+}

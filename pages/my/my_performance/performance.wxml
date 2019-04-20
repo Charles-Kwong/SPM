@@ -1,0 +1,27 @@
+<!--pages/my/my_performance/performance.wxml-->
+<scroll-view scroll-y="true" class="container" bindscrolltoupper="upper" upper-threshold="10" lower-threshold="5" bindscrolltolower="lower" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+  <!--筛选项-->
+  <view class="filter-box">
+    <view class="tabTit box flex-wrp">
+      <view class="flex1{{!tab[index]?' active':''}} flex-item" wx:for="{{tabTxt}}" wx:key="type" data-index="{{index}}" bindtap="filterTab" style="flex-direction:row;">
+        <text>{{item}}</text>
+        <image src="/image/icon/arrow.png"></image>
+      </view>
+    </view>
+    <view class="tabLayer" hidden="{{tab[0]}}">
+      <text class="{{period_id==0?'active':''}}" data-id="0" data-index="0" data-txt="期间" bindtap="filter">全部</text>
+      <text class="{{period==item.id?'active':''}}" wx:for="{{period}}" wx:key="td" wx:for-item="item" data-id="{{item.id}}" data-index="0" data-txt="{{item.title}}" bindtap="filter">{{item.title}}</text>
+    </view>
+  </view>
+
+
+  <!-- 分数列表 -->
+  <view wx:for="{{markList}}" wx:key="ml" wx:for-item="item">
+    <view class='recordItem flex-wrp' style="flex-direction:row;justify-content:space-between;" bindtap='tapDialog' data-id="{{item.id}}">
+      <view class="flex-item item-title">{{item.month}}</view>
+      <view class="flex-item item-content">{{item.total}}</view>
+    </view>
+  </view>
+</scroll-view>
+
+<dialog id="dialog" bind:okEvent="okEvent"></dialog>

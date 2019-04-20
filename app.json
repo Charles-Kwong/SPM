@@ -1,0 +1,51 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/login/login",
+    
+    "pages/logs/logs",
+    "pages/my/my_info",
+    "pages/tracing/tracing_list",
+    "pages/search/search",
+    "pages/customer-info/customer_info",
+    "pages/my/my_detail/info_detail",
+    "pages/my/my_performance/performance",
+    "pages/my/modify_info/modify_info",
+    "pages/my/modify_pwd/modify_pwd",
+    "pages/customer-info/add_trace/add_trace",
+    "pages/mgr-index/index/index"
+  ],
+  "tabBar": {
+    "borderStyle": "#fff",
+    "backgroundColor": "#fff",
+    "color": "#999",
+    "selectedColor": "#428C89",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "今日任务",
+        "iconPath": "image/icon/home.png",
+        "selectedIconPath": "image/icon/home2.png"
+      },
+      {
+        "pagePath": "pages/tracing/tracing_list",
+        "text": "客户列表",
+        "iconPath": "image/icon/all.png",
+        "selectedIconPath": "image/icon/all2.png"
+      },
+      {
+        "pagePath": "pages/my/my_info",
+        "text": "我的",
+        "iconPath": "image/icon/personal.png",
+        "selectedIconPath": "image/icon/personal2.png"
+      }
+    ]
+  },
+  "window": {
+    "backgroundTextStyle": "white",
+    "navigationBarBackgroundColor": "#377EE8",
+    "navigationBarTitleText": "润妃服务管理",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": false
+  }
+}

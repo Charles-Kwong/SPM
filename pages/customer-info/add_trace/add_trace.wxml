@@ -1,0 +1,42 @@
+<!--pages/customer-info/add_trace/add_trace.wxml-->
+<scroll-view scroll-y="true" class="container" bindscrolltoupper="upper" upper-threshold="10" lower-threshold="5" bindscrolltolower="lower" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+  <view class="weui-cells__title">新增跟踪记录</view>
+  <view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">客户姓名</view>
+      </view>
+      <view class="weui-cell__bd">杨美丽</view>
+    </view>
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">跟踪日期</view>
+      </view>
+      <view class="weui-cell__bd">
+        <picker mode="date" value="{{date}}" start="2015-01-01" end="{{today}}" bindchange="bindDateChange">
+          <view class="weui-input">{{date}}</view>
+        </picker>
+      </view>
+    </view>
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">跟踪情况描述</view>
+      </view>
+      <view class="weui-cell__bd">
+        <textarea bindinput="bindKeyInput" bindblur='bindblurEvent'></textarea>
+      </view>
+    </view>
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">产品调整情况</view>
+      </view>
+      <view class="weui-cell__bd">
+        <textarea bindinput="bindKeyInput" bindblur='bindblurEvent'></textarea>
+      </view>
+    </view>
+  </view>
+
+  <view class='box'>
+    <button class="btn">保存记录</button>
+  </view>
+</scroll-view>

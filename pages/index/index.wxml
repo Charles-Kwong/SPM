@@ -1,0 +1,59 @@
+<!--index.wxml-->
+<scroll-view scroll-y="true" class="container" bindscrolltoupper="upper" upper-threshold="10" lower-threshold="5" bindscrolltolower="lower"  scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+
+  <!-- 信息框 -->
+  <view class='today-message-box'>
+    <view class=" welcome-info">
+      <image src='/image/icon/user.png' class='icon'></image>
+      <text class='info-text'>{{userInfo.position}}-{{userInfo.name}}  </text>
+      <image src='/image/icon/today.png' class='icon'></image>
+      <text class='info-text'>{{today}}</text>
+    </view>
+    <view class="flex-wrp number-view" style="flex-direction:row;justify-content:space-between;">
+      <view class='flex-item'>
+        <view class='message-count'>{{customerList.length-customerListFinish}}</view>
+        <view class='message-title'>未完成</view>
+      </view>
+      <view class='flex-item'>
+        <view class='message-count'>{{customerListFinish}}</view>
+        <view class='message-title'>已完成</view>
+      </view>
+      <view class='flex-item'>
+        <view class='message-count'>{{customerList.length}}</view>
+        <view class='message-title'>今日任务</view>
+        </view>
+      </view>
+    </view>
+  
+  <view class="space-line"></view>
+
+  <!--筛选项-->
+  <view class="filter-box">
+    <view class="tabTit box flex-wrp">
+      <view class="flex1{{!tab[index]?' active':''}} flex-item" wx:for="{{tabTxt}}" wx:key="type" data-index="{{index}}" bindtap="filterTab" style="flex-direction:row;">
+        <text>{{item}}</text>
+        <image src="/image/icon/arrow.png"></image>
+      </view>
+    </view>
+    <view class="tabLayer" hidden="{{tab[0]}}">
+      <text class="{{tDate_id==0?'active':''}}" data-id="0" data-index="0" data-txt="跟踪日期" bindtap="filter">不限</text>
+      <text class="{{tracingDate==item.id?'active':''}}" wx:for="{{tracingDate}}" wx:key="td" wx:for-item="item" data-id="{{item.id}}" data-index="0" data-txt="{{item.title}}" bindtap="filter">{{item.title}}</text>
+    </view>
+    <view class="tabLayer" hidden="{{tab[1]}}">
+      <text class="{{tState_id==0?'active':''}}" data-id="0" data-index="1" data-txt="完成状态" bindtap="filter">不限</text>
+      <text class="{{tracingState==item.id?'active':''}}" wx:for="{{tracingState}}" wx:key="ts" wx:for-item="item" data-id="{{item.id}}" data-index="1" data-txt="{{item.title}}" bindtap="filter">{{item.title}}</text>
+    </view>
+  </view>
+  
+
+  <!-- 客户列表 -->
+  <view class="weui-cells weui-cells_after-title list">
+    <navigator url="{{item.url}}" class="weui-cell weui-cell_access" hover-class="weui-cell_active" wx:for="{{customerList}}" wx:key="text">
+      <view class="weui-cell__bd" style="padding-top:10rpx;">{{item.text}}</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access">{{item.state}}
+        <view class="weui-badge weui-badge_dot" wx:if="{{item.state =='未完成'}}"></view>
+          </view>
+      </navigator>
+  </view>
+
+</scroll-view>
