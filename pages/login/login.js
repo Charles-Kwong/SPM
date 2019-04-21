@@ -64,7 +64,7 @@ Page({
         });
         wx.request({
             method: 'post',
-            url: app.globalData.url.url + "/login", 
+            url: app.globalData.url.url + "/login",
             data: {
                 empName: e.detail.value.no,
                 empPassword: e.detail.value.pwd
@@ -75,7 +75,10 @@ Page({
             success: function(res) {
                 if (res.statusCode == 200) {
                     app.globalData.user = res.data;
-                    wx.setStorageSync('cookies', res.header["Set-Cookie"]);
+                    var cookie = res.header["Set-Cookie"];
+                    cookie = cookie.replace("HttpOnly,", "HttpOnly;");
+                    wx.setStorageSync('cookies', cookie);
+
                     setTimeout(function() {
                         wx.switchTab({
                             url: '../index/index',
@@ -95,6 +98,13 @@ Page({
                         duration: 2000
                     })
                 }
+            },
+            fail: function(res) {
+                wx.showToast({
+                    title: res.errMsg,
+                    icon: 'none',
+                    duration: 2000
+                })
             }
         })
     },
@@ -105,12 +115,29 @@ Page({
         this.setData({
             disabled: false
         });
-        var student = wx.getStorageSync('student');
-        if (typeof(student) == 'object' && student.no != '' && student.classid != '') {
-            wx.switchTab({
-                url: '../teacher/teacher',
-            })
-        }
+        wx.request({
+            method: 'post',
+            url: app.globalData.url.url + '/login',
+            header: {
+                'content-type': 'application/x-www-form-urlencoded',
+                'cookie': wx.getStorageSync("cookies")
+            },
+            success: function(res) {
+                if (res.statusCode == 200) {
+                    app.globalData.user = res.data;
+                    wx.showToast({
+                        title: '登陆成功，正在跳转',
+                        icon: 'none',
+                        duration: 1000
+                    })
+                    setTimeout(function() {
+                        wx.switchTab({
+                            url: '../index/index',
+                        })
+                    }, 1000)
+                }
+            }
+        })
     },
 
     /**

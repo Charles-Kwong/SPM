@@ -67,7 +67,7 @@ Page({
             url: app.globalData.url.url + '/client/' + that.data.cliId,
             header: {
                 'content-type': 'application/x-www-form-urlencoded',
-                'cookie': wx.getStorageSync("cookies")
+                'Cookie': wx.getStorageSync("cookies")
             },
             success: function(res) {
                 var customer = res.data;

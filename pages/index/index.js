@@ -86,7 +86,7 @@ Page({
             url: app.globalData.url.url + '/task/list/' + app.globalData.user.empId,
             header: {
                 'content-type': 'application/x-www-form-urlencoded',
-                'cookie': wx.getStorageSync("cookies")
+                'Cookie': wx.getStorageSync("cookies")
             },
             success: function(res) {
                 var taskList = res.data;

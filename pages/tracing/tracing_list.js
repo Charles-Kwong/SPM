@@ -38,7 +38,7 @@ Page({
             url: app.globalData.url.url + '/client/list/' + app.globalData.user.empId,
             header: {
                 'content-type': 'application/x-www-form-urlencoded',
-                'cookie': wx.getStorageSync("cookies")
+                'Cookie': wx.getStorageSync("cookies")
             },
             success: function(res) {
                 var customerList = res.data;
