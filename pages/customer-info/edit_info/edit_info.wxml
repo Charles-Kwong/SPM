@@ -1,33 +1,35 @@
-<!--pages/my/modify_info/modify_info.wxml-->
+<!--pages/customer-info/edit_info/edit_info.wxml-->
 <scroll-view scroll-y="true" class="container" bindscrolltoupper="upper" upper-threshold="10" lower-threshold="5" bindscrolltolower="lower" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
-  <view class="weui-cells__title">修改资料</view>
+  <view class="weui-cells__title">修改客户信息</view>
   <view class="weui-cells weui-cells_after-title">
   <view class="weui-cell weui-cell_input">
     <view class="weui-cell__hd">
-      <view class="weui-label">性别</view>
+      <view class="weui-label">客户类别</view>
     </view>
     <view class="weui-cell__bd">
-    <picker bindchange="bindPickerChange" value="{{index}}" range="{{genderItem}}">
+    <picker bindchange="bindPickerChange" value="{{typeIndex}}" range="{{type}}">
         <view class="picker">
-          {{genderItem[index]}}
+          {{type[typeIndex]}}
         </view>
       </picker>
     </view>
   </view>
   <view class="weui-cell weui-cell_input">
-    <view class="weui-cell__hd">
-      <view class="weui-label">联系电话</view>
+      <view class="weui-cell__hd">
+        <view class="weui-label">购买日期</view>
+      </view>
+      <view class="weui-cell__bd">
+        <picker mode="date" value="{{date}}" start="2015-01-01" end="{{today}}" bindchange="bindDateChange">
+          <view class="weui-input">{{customer.cliPurchaseDate}}</view>
+        </picker>
+      </view>
     </view>
-    <view class="weui-cell__bd">
-      <input class="weui-input" />
-    </view>
-  </view>
   <view class="weui-cell weui-cell_input">
     <view class="weui-cell__hd">
-      <view class="weui-label">住址</view>
+      <view class="weui-label">初诊皮肤情况</view>
     </view>
     <view class="weui-cell__bd">
-      <textarea bindinput="bindKeyInput" bindblur='bindblurEvent'></textarea>
+      <textarea>{{customer.cliFirstDesc}}</textarea>
     </view>
   </view>
 </view>

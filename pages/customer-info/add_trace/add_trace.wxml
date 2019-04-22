@@ -4,9 +4,9 @@
   <view class="weui-cells weui-cells_after-title">
     <view class="weui-cell weui-cell_input">
       <view class="weui-cell__hd">
-        <view class="weui-label">客户姓名</view>
+        <view class="weui-label">客户编号</view>
       </view>
-      <view class="weui-cell__bd">杨美丽</view>
+      <view class="weui-cell__bd">{{cliId}}</view>
     </view>
     <view class="weui-cell weui-cell_input">
       <view class="weui-cell__hd">
@@ -23,7 +23,7 @@
         <view class="weui-label">跟踪情况描述</view>
       </view>
       <view class="weui-cell__bd">
-        <textarea bindinput="bindKeyInput" bindblur='bindblurEvent'></textarea>
+        <textarea></textarea>
       </view>
     </view>
     <view class="weui-cell weui-cell_input">
@@ -31,7 +31,7 @@
         <view class="weui-label">产品调整情况</view>
       </view>
       <view class="weui-cell__bd">
-        <textarea bindinput="bindKeyInput" bindblur='bindblurEvent'></textarea>
+        <textarea></textarea>
       </view>
     </view>
   </view>

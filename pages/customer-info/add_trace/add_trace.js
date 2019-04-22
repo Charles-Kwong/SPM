@@ -3,14 +3,16 @@ var util = require('/../../../utils/util.js');
 Page({
   data: {
     date:"",
-    today:""
+    today:"",
+    cliId:""
   },
 
   onLoad: function (options) {
     var today = util.formatDate(new Date());
     this.setData({
       today: today,
-      date: today
+      date: today,
+      cliId:options.cliId
     })
   },
   bindDateChange: function (e) {

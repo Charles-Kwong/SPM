@@ -24,6 +24,7 @@ Page({
         }],
         tState_id: 0,
         tState_txt: "",
+        addTraceUrl:"/pages/customer-info/add_trace/add_trace",
         taskList: [],
         taskCompleteCount: 0
     },

@@ -3,16 +3,7 @@ Page({
     focus: false,
     inputValue: '',
     genderItem:['男','女'],
-    index : 1,
-    genderItems:[
-      {
-        name:'男'
-      },
-      {
-        name: '女',
-        checked: true
-      }
-    ]
+    index : 1
   },
   bindPickerChange: function (e) {
     this.setData({
