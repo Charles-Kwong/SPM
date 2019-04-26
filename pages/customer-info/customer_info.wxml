@@ -19,6 +19,10 @@
     <swiper-item class='swiper'>
       <view class='divide-line'>—————— 业务资料 ——————</view>
       <view class='recordItem flex-wrp' style="flex-direction:row;justify-content:space-between;">
+        <view class="flex-item item-title">客户编号</view>
+        <view class="flex-item item-content">{{customer.cliId}}</view>
+      </view>
+      <view class='recordItem flex-wrp' style="flex-direction:row;justify-content:space-between;">
         <view class="flex-item item-title">姓名</view>
         <view class="flex-item item-content">{{customer.cliName}}</view>
       </view>
@@ -27,7 +31,7 @@
         <view class="flex-item item-content">{{customer.cliType.typeName}}</view>
       </view>
       <view class='recordItem flex-wrp' style="flex-direction:row;justify-content:flex-start;">
-        <view class="flex-item item-title">开始日期</view>
+        <view class="flex-item item-title">购买日期</view>
         <view class="flex-item item-content">{{customer.cliPurchaseDate}}</view>
       </view>
       <view class='recordItem flex-wrp' style="flex-direction:row;justify-content:flex-start;">
@@ -78,4 +82,7 @@
 
   <view bindtap='adddetial'>
       <image class="add_icon" src="/image/icon/add.png"></image>
+  </view>
+   <view bindtap='editInfo'>
+      <image class="edit_icon" src="/image/icon/edit.png"></image>
   </view>

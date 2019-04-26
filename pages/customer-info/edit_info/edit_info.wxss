@@ -1,0 +1,39 @@
+/* pages/customer-info/edit_info/edit_info.wxss */
+.container {
+  padding-top: 50rpx;
+  font-size: 34rpx;
+  color: #000;
+}
+.weui-cell__bd{
+  margin-left: 40rpx;
+  padding: 20rpx 0;
+  color: #666;
+}
+label{
+  margin-right: 30rpx;
+  line-height: 100rpx;
+}
+.radio-group{
+  height: 100rpx;
+}
+textarea{
+  height: 200rpx;
+}
+.btn{
+  margin-top:50rpx;
+  display:block;
+margin-left:20rpx;
+margin-right:20rpx;
+padding-left:14px;
+padding-right:14px;
+box-sizing:border-box;
+font-size:40rpx;
+text-align:center;
+text-decoration:none;
+background-color:#377EE8;
+color:#FFFFFF;
+line-height:2.55555556;
+border-radius:5px;
+-webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+overflow:hidden;
+}

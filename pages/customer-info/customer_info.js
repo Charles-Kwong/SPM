@@ -81,10 +81,18 @@ Page({
     },
     adddetial: function() {   
         wx.navigateTo({ 
-            url: '/pages/customer-info/add_trace/add_trace',
+            url: '/pages/customer-info/add_trace/add_trace?cliId='+this.data.customer.cliId,
             success: function(res) {},
             fail: function(res) {},
             complete: function(res) {},
         })
     },
+  editInfo: function () {
+    wx.navigateTo({
+      url: '/pages/customer-info/edit_info/edit_info?cliId=' + this.data.customer.cliId + "&cliType=" + this.data.customer.cliType.typeId + "&cliPurchaseDate=" + this.data.customer.cliPurchaseDate + "&cliFirstDesc=" + this.data.customer.cliFirstDesc,
+      success: function (res) { },
+      fail: function (res) { },
+      complete: function (res) { },
+    })
+  },
 })
