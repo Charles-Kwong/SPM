@@ -3,7 +3,7 @@
 <!-- 头像及昵称 -->
 <view class="container">
   <view  bindtap="bindViewTap" class="userinfo">
-    <text class="userinfo-nickname">{{userInfo.name}}</text>
+    <text class="userinfo-nickname">{{user.empName}}</text>
   </view>
 </view>
 

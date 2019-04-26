@@ -6,7 +6,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    userInfo: {}
+    user: {}
   },
 
   goToModifyPage: function() {
@@ -20,7 +20,7 @@ Page({
    */
   onLoad: function(options) {
     this.setData({
-      userInfo: app.globalData.userInfo
+      user: app.globalData.user
     })
   }
 })

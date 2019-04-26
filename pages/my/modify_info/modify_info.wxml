@@ -1,38 +1,38 @@
 <!--pages/my/modify_info/modify_info.wxml-->
 <scroll-view scroll-y="true" class="container" bindscrolltoupper="upper" upper-threshold="10" lower-threshold="5" bindscrolltolower="lower" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
-  <view class="weui-cells__title">修改资料</view>
-  <view class="weui-cells weui-cells_after-title">
-  <view class="weui-cell weui-cell_input">
-    <view class="weui-cell__hd">
-      <view class="weui-label">性别</view>
-    </view>
-    <view class="weui-cell__bd">
-    <picker bindchange="bindPickerChange" value="{{index}}" range="{{genderItem}}">
-        <view class="picker">
-          {{genderItem[index]}}
+    <view class="weui-cells__title">修改资料</view>
+    <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_input">
+            <view class="weui-cell__hd">
+                <view class="weui-label">性别</view>
+            </view>
+            <view class="weui-cell__bd">
+                <picker bindchange="bindPickerChange" value="{{index}}" range="{{genderItem}}">
+                    <view class="picker">
+                        {{genderItem[index]}}
+                    </view>
+                </picker>
+            </view>
         </view>
-      </picker>
+        <view class="weui-cell weui-cell_input">
+            <view class="weui-cell__hd">
+                <view class="weui-label">联系电话</view>
+            </view>
+            <view class="weui-cell__bd">
+                <input class="weui-input" type='text' bindinput='bindKeyInput' bindblur='bindblurEvent' name='empPhone' value='{{inputValue}}' placeholder='请填写' />
+            </view>
+        </view>
+        <view class="weui-cell weui-cell_input">
+            <view class="weui-cell__hd">
+                <view class="weui-label">住址</view>
+            </view>
+            <view class="weui-cell__bd">
+                <textarea bindinput="bindKeyInput" bindblur='bindblurEvent' name='empAddress'>{{user.empAddress}}</textarea>
+            </view>
+        </view>
     </view>
-  </view>
-  <view class="weui-cell weui-cell_input">
-    <view class="weui-cell__hd">
-      <view class="weui-label">联系电话</view>
+
+    <view class='box'>
+        <button class="btn">保存修改</button>
     </view>
-    <view class="weui-cell__bd">
-      <input class="weui-input" />
-    </view>
-  </view>
-  <view class="weui-cell weui-cell_input">
-    <view class="weui-cell__hd">
-      <view class="weui-label">住址</view>
-    </view>
-    <view class="weui-cell__bd">
-      <textarea bindinput="bindKeyInput" bindblur='bindblurEvent'></textarea>
-    </view>
-  </view>
-</view>
-  
-<view class='box'>
-  <button class="btn">保存修改</button>
-  </view>
 </scroll-view>

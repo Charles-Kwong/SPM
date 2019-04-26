@@ -2,40 +2,40 @@
 <scroll-view scroll-y="true" class="container" bindscrolltoupper="upper" upper-threshold="10" lower-threshold="5" bindscrolltolower="lower"  scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
 <view class='recordItem flex-wrp' style="flex-direction:row;justify-content:space-between;">
   <view class="flex-item item-title">员工编号</view>
-  <view class="flex-item item-content">{{userInfo.eid}}</view>
+  <view class="flex-item item-content">{{user.empId}}</view>
 </view>
 <view class='recordItem flex-wrp' style="flex-direction:row;justify-content:space-between;">
   <view class="flex-item item-title">姓名</view>
-  <view class="flex-item item-content">{{userInfo.name}}</view>
+  <view class="flex-item item-content">{{user.empName}}</view>
 </view>
 <view class='recordItem flex-wrp' style="flex-direction:row;justify-content:flex-start;">
   <view class="flex-item item-title">状态</view>
-  <view class="flex-item item-content">{{userInfo.state}}</view>
+  <view class="flex-item item-content">{{user.empStatus}}</view>
 </view>
 <view class='recordItem flex-wrp' style="flex-direction:row;justify-content:flex-start;">
   <view class="flex-item item-title">职位</view>
-  <view class="flex-item item-content">{{userInfo.position}}</view>
+  <view class="flex-item item-content">{{user.empPosition}}</view>
 </view>
 <view class='recordItem flex-wrp' style="flex-direction:row;justify-content:flex-start;">
   <view class="flex-item item-title">入职时间</view>
-  <view class="flex-item item-content">{{userInfo.enterDate}}</view>
+  <view class="flex-item item-content">{{user.empEntryDate}}</view>
 </view>
 <view class='divide-line'>—————— 基本资料 ——————</view>
 <view class='recordItem flex-wrp' style="flex-direction:row;justify-content:flex-start;">
   <view class="flex-item item-title">性别</view>
-  <view class="flex-item item-content">{{userInfo.gender}}</view>
+  <view class="flex-item item-content">{{user.empGender}}</view>
 </view>
 <view class='recordItem flex-wrp' style="flex-direction:row;justify-content:flex-start;">
   <view class="flex-item item-title">年龄</view>
-  <view class="flex-item item-content">{{userInfo.age}}</view>
+  <view class="flex-item item-content">{{user.empAge}}</view>
 </view>
 <view class='recordItem flex-wrp' style="flex-direction:row;justify-content:flex-start;">
   <view class="flex-item item-title">电话</view>
-  <view class="flex-item item-content">{{userInfo.phone}}</view>
+  <view class="flex-item item-content">{{user.empPhone}}</view>
 </view>
 <view class='recordItem flex-wrp' style="flex-direction:row;justify-content:flex-start;">
   <view class="flex-item item-title">住址</view>
-  <view class="flex-item item-content">{{userInfo.addr}}</view>
+  <view class="flex-item item-content">{{user.empAddress}}</view>
 </view>
 <button class="btn" bindtap="goToModifyPage">修改资料</button>
 
