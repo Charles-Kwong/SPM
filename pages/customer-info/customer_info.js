@@ -8,12 +8,7 @@ Page({
     data: {
         currentIndex: 0,
         customer: {},
-        tracingRecord: [{
-            date: "2019-04-01",
-            desc: "干燥脱皮，泛红",
-            adjustment: "无",
-            advisor: "张三"
-        }]
+        tracingRecord: []
     },
     //swiper切换时会调用
     pagechange: function(e) {
@@ -62,6 +57,23 @@ Page({
                 //更新数据
                 that.setData({
                     customer: customer
+                })
+            }
+        })
+        wx.request({
+            url: app.globalData.url.url + '/record/list/client/' + that.data.cliId,
+            header: {
+                'content-type': 'application/x-www-form-urlencoded',
+                'Cookie': wx.getStorageSync("cookies")
+            },
+            success: function(res) {
+                var tracingRecord = res.data;
+                for (var i in tracingRecord){
+                    tracingRecord[i].recTrackDate = new Date(tracingRecord[i].recTrackDate).toLocaleString();
+                }
+                //更新数据
+                that.setData({
+                    tracingRecord: tracingRecord
                 })
             }
         })

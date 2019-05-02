@@ -34,15 +34,15 @@ Page({
             data: {
                 'advisor.empId': app.globalData.user.empId,
                 'cliType.typeId': parseInt(this.data.typeIndex) + 1,
-                cliPurchaseDate: this.data.date,
-                cliFirstDesc: this.data.firstDesc
+                cliPurchaseDate: new Date(e.detail.value.date),
+                cliFirstDesc: e.detail.value.desc
             },
             header: {
                 'content-type': 'application/x-www-form-urlencoded',
                 'Cookie': wx.getStorageSync("cookies")
             },
             success: function(res) {
-                if (res.statusCode == 200) {
+                if (res.statusCode == 201) {
                     // 修改成功
                     wx.showToast({
                         title: '修改成功',
