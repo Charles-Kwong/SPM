@@ -2,7 +2,7 @@
 App({
     globalData: {
         url: {
-          url: "http://localhost:8080/spms"
+          url: "http://139.199.187.67:8080/spms"
         },
         user: {
         },
