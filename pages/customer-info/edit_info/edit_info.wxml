@@ -1,5 +1,5 @@
 <!--pages/customer-info/edit_info/edit_info.wxml-->
-<scroll-view scroll-y="true" class="container" bindscrolltoupper="upper" upper-threshold="10" lower-threshold="5" bindscrolltolower="lower" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+
     <view class="weui-cells__title">修改客户信息</view>
     <form bindsubmit="formSubmit" class='form'>
         <view class="weui-cells weui-cells_after-title">
@@ -30,7 +30,7 @@
                     <view class="weui-label">初诊皮肤情况</view>
                 </view>
                 <view class="weui-cell__bd">
-                    <textarea name="desc">{{firstDesc}}</textarea>
+                    <textarea name="desc" maxlength="500" bindblur="bindTextareaBlur" value="{{firstDesc}}"></textarea>
                 </view>
             </view>
         </view>
@@ -39,4 +39,3 @@
             <button class="btn" form-type='submit'>保存修改</button>
         </view>
     </form>
-</scroll-view>

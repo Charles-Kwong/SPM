@@ -27,7 +27,7 @@
                 <view class="weui-label">住址</view>
             </view>
             <view class="weui-cell__bd">
-                <textarea bindinput="bindKeyInput" bindblur='bindblurEvent' name='empAddress'>{{user.empAddress}}</textarea>
+                <textarea name='empAddress' maxlength="500" bindblur="bindTextareaBlur" value="{{address}}" ></textarea>
             </view>
         </view>
     </view>

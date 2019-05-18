@@ -4,6 +4,7 @@ Page({
         user: {},
         focus: false,
         inputValue: '',
+        address:'',
         genderItem: ['男', '女'],
         index: -1
     },
@@ -18,8 +19,8 @@ Page({
             inputValue: e.detail.value
         })
     },
-    bindblurEvent: function(e) {
-        console.log("失去焦点时", e.detail)
+  bindblurEvent: function(e) {
+        console.log("失去焦点时", e.detail);
     },
     bindReplaceInput: function(e) {
         var value = e.detail.value
@@ -47,11 +48,17 @@ Page({
             wx.hideKeyboard()
         }
     },
+    bindTextareaBlur: function (e) {
+      this.setData({
+        address: e.detail.value
+      })
+    },
     onLoad: function() {
         var user = app.globalData.user;
         this.setData({
             user: user,
             inputValue: user.empPhone,
+            address: user.empAddress,
             index: user.empGender == '男' ? 0 : 1
         })
     }
