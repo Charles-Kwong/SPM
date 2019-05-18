@@ -22,6 +22,7 @@ Page({
         })
     },
     formSubmit: function(e) {
+      var id = this.data.cliId;
         wx.request({
             method: 'post',
             url: app.globalData.url.url + "/record",
@@ -44,8 +45,8 @@ Page({
                         duration: 1000
                     })
                     setTimeout(function() {
-                        wx.navigateBack({
-                            delta: 1
+                      wx.redirectTo({
+                        url: "/pages/customer-info/customer_info?cliId="+id
                         })
                     }, 1000)
                 } else {

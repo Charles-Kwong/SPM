@@ -14,7 +14,7 @@ Page({
     },
     bindDateChange: function(e) {
         this.setData({
-            date: e.detail.value
+          date: e.detail.value
         })
     },
     bindPickerChange: function(e) {
@@ -28,14 +28,15 @@ Page({
         })
     },
     formSubmit: function(e) {
+      var id = this.data.customer.cliId;
         wx.request({
             method: 'put',
             url: app.globalData.url.url + "/client/" + this.data.customer.cliId,
             data: {
                 'advisor.empId': app.globalData.user.empId,
                 'cliType.typeId': parseInt(this.data.typeIndex) + 1,
-                cliPurchaseDate: new Date(e.detail.value.date),
-                cliFirstDesc: e.detail.value.desc
+                cliPurchaseDate: this.data.date,
+                cliFirstDesc: this.data.firstDesc
             },
             header: {
                 'content-type': 'application/x-www-form-urlencoded',
@@ -48,7 +49,12 @@ Page({
                         title: '修改成功',
                         icon: 'none',
                         duration: 1000
+                    });
+                  setTimeout(function () {
+                    wx.redirectTo({
+                      url: "/pages/customer-info/customer_info?cliId=" + id
                     })
+                  }, 1000)
                 } else {
                     wx.showToast({
                         title: '服务器出现错误',
@@ -77,7 +83,9 @@ Page({
                 cliPurchaseDate: options.cliPurchaseDate,
                 cliFirstDesc: options.cliFirstDesc
             },
-            typeIndex: options.cliType - 1
+            typeIndex: options.cliType - 1,
+            firstDesc: options.cliFirstDesc,
+            date: options.cliPurchaseDate
         })
     }
 })

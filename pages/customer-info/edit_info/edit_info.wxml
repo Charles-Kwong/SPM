@@ -21,7 +21,7 @@
                 </view>
                 <view class="weui-cell__bd">
                     <picker mode="date" name="date" value="{{date}}" start="2015-01-01" end="{{today}}" bindchange="bindDateChange">
-                        <view class="weui-input">{{customer.cliPurchaseDate}}</view>
+                        <view class="weui-input">{{date}}</view>
                     </picker>
                 </view>
             </view>
@@ -30,7 +30,7 @@
                     <view class="weui-label">初诊皮肤情况</view>
                 </view>
                 <view class="weui-cell__bd">
-                    <textarea name="desc" bindblur='bindTextareaBlur'>{{customer.cliFirstDesc}}</textarea>
+                    <textarea name="desc">{{firstDesc}}</textarea>
                 </view>
             </view>
         </view>
