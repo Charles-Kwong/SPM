@@ -2,16 +2,16 @@
 
 <!-- 头像及昵称 -->
 <view class="container">
-  <view  bindtap="bindViewTap" class="userinfo">
-    <text class="userinfo-nickname">{{user.empName}}</text>
-  </view>
+    <view bindtap="bindViewTap" class="userinfo">
+        <text class="userinfo-nickname">{{user.empName}}</text>
+    </view>
 </view>
 
 <view class="space-line"></view>
 
 <!-- 功能菜单 -->
 <view class="weui-cells weui-cells_after-title">
-    <navigator url="{{item.url}}" class="weui-cell weui-cell_access" hover-class="weui-cell_active" wx:for="{{meList}}" wx:key="text">
+    <navigator url="{{item.url}}" class="weui-cell weui-cell_access" open-type='{{item.openType}}' hover-class="weui-cell_active" wx:for="{{meList}}" wx:key="text">
         <view class="weui-cell__hd">
             <image src="{{item.icon}}" style="margin-right: 10px;vertical-align: middle;width:20px; height: 20px;"></image>
         </view>

@@ -2,10 +2,10 @@
 App({
     globalData: {
         url: {
-          url: "http://139.199.187.67:8080/spms"
+              url: "http://139.199.187.67:8080/spms"
+            // url: "http://localhost:8080/spms"
         },
-        user: {
-        },
+        user: {},
         userInfo: {
             eid: "RF001",
             name: "张三",
