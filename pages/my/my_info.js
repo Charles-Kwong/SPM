@@ -20,7 +20,11 @@ Page({
         text: '修改密码',
         icon: '/image/icon/modifyPwd.png',
         url: '/pages/my/modify_pwd/modify_pwd'
-      }
+      },
+        {
+            text: '退出登陆',
+            url: '/pages/login/login?logout=true'
+        }
     ]
   },
 
