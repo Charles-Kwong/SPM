@@ -71,9 +71,9 @@
     </swiper-item>
     <swiper-item class='swiper' class='swiper'>
       <view wx:for="{{tracingRecord}}" wx:for-item="item" wx:key="tr" class='recordItem'>
-        <view class="tDate">{{item.date}}</view>
-        <view>跟踪情况描述：{{item.desc}}</view>
-        <view>产品调整情况：{{item.adjustment}}</view>
+        <view class="tDate">{{item.recTrackDate}}</view>
+        <view>跟踪情况描述：{{item.recTrackDesc}}</view>
+        <view>产品调整情况：{{item.recRecipeChangeDesc}}</view>
       </view>
     </swiper-item>
 

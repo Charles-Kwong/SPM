@@ -1,5 +1,6 @@
 {
   "pages": [
+    
     "pages/login/login",
     "pages/index/index",
     "pages/logs/logs",
@@ -12,8 +13,10 @@
     "pages/my/modify_info/modify_info",
     "pages/my/modify_pwd/modify_pwd",
     "pages/customer-info/add_trace/add_trace",
+    "pages/customer-info/edit_info/edit_info",
     "pages/mgr-index/index/index",
-    "pages/customer-info/edit_info/edit_info"
+    "pages/mgr-index/client_management/client_list/client_list",
+    "pages/mgr-index/client_management/employee_list/employee_list"
   ],
   "tabBar": {
     "borderStyle": "white",

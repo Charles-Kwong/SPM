@@ -24,9 +24,9 @@ Page({
     ]
   },
 
-  onLoad: function () {
+  onLoad: function (options) {
     this.setData({
-      userInfo : app.globalData.userInfo
+      user : app.globalData.user
     })
     // console.log('onLoad')
     // var that = this

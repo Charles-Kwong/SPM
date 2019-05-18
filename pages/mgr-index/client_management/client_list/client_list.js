@@ -1,44 +1,33 @@
-// pages/mgr-index/index/index.js
+// pages/mgr-index/client_management/client_list/client_list.js
+const app = getApp();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    gridList:[
-      {
-        url:'/pages/mgr-index/client_management/client_list/client_list',
-        title:'客户管理',
-        iconUrl:'/image/icon/cm.png'
-      },
-      {
-        url: '/pages/mgr-index/client_management/employee_list/employee_list',
-        title: '员工管理',
-        iconUrl: '/image/icon/em.png'
-      }, 
-      {
-        url: '',
-        title: '客户分配',
-        iconUrl: '/image/icon/fp.png'
-      },
-      {
-        url: '',
-        title: '员工绩效',
-        iconUrl: '/image/icon/ep.png'
-      },
-      {
-        url: '',
-        title: '我的资料',
-        iconUrl: '/image/icon/myinfo.png'
-      }
-    ]
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    var that = this;
+    wx.request({
+      url: app.globalData.url.url +'/client/',
+      header: {
+        'content-type': 'application/x-www-form-urlencoded',
+        'Cookie': wx.getStorageSync("cookies")
+      },
+      success: function (res) {
+        var customerList = res.data;
+        //更新数据
+        that.setData({
+          customerList: customerList
+        })
+      }
+    })
   },
 
   /**

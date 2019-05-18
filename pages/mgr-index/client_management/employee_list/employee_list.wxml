@@ -1,0 +1,24 @@
+<!--pages/mgr-index/client_management/employee_list/employee_list.wxml-->
+<scroll-view scroll-y="true" class="container" bindscrolltoupper="upper" upper-threshold="10" lower-threshold="5" bindscrolltolower="lower" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+    <!-- 搜索框 -->
+    <view class="search flex-wrp">
+        <view class="search-left flex-item">
+            <image src="/image/icon/search.png"></image>
+            <input placeholder="搜索职员姓名" placeholder-class="search-placeholder" bindtap='bindSearch' />
+        </view>
+        <view class="search-right flex-item" bindtap="upper">
+            <image src="/image/icon/customer.png"></image>
+        </view>
+    </view>
+    <view class="space-line"></view>
+    <!-- 职员列表 -->
+    <view class="weui-cells weui-cells_after-title list">
+        <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active" wx:for="{{eList}}" wx:key="text">
+            <view class="weui-cell__bd" style="padding-top:10rpx;">{{item.empName}}</view>
+            <view class="badge" wx:if="{{showBadge}}">1</view>
+            <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+        </navigator>
+
+    </view>
+</scroll-view>
+
